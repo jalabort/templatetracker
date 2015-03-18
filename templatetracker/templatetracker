@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+import numpy as np
+
+from menpo.shape import PointCloud
+
+from tracker.base import Tracker
+
+
+def main(video_file, centre, shape):
+    r"""
+    """
+    # instantiate tracker
+    tracker = Tracker(video_file, centre, shape)
+    # start tracking
+    tracker.track()
+
+
+if __name__ == "__main__":
+    from argparse import ArgumentParser
+
+    parser = ArgumentParser(
+        description=r"""
+                    Tracker.
+                    """)
+
+    parser.add_argument("video_file",
+                        help="Path to video file.")
+    parser.add_argument("target_centre",
+                        help="Position of target centre on first frame.")
+    parser.add_argument("target_shape",
+                        help="Size of target on first frame.")
+
+    ns = parser.parse_args()
+    target_centre = PointCloud(
+        np.asarray(map(np.double, ns.target_centre.split(',''')))[None])
+    h, w = map(int, ns.target_shape.split(','))
+    main(ns.video_file, target_centre, (h, w))
