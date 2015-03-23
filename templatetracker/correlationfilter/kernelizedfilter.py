@@ -1,7 +1,7 @@
 import numpy as np
 from numpy.fft import fft2, ifft2, ifftshift
 
-from tracker.correlationfilter.utils import pad, crop, fast2dconv
+from templatetracker.correlationfilter.utils import pad, crop, fast2dconv
 
 
 def gaussian_correlation(x, z, sigma=0.2, boundary='constant'):

@@ -3,7 +3,7 @@ from numpy.fft import fft2, ifft2, ifftshift
 from scipy.sparse import spdiags, eye as speye
 from scipy.sparse.linalg import spsolve
 
-from tracker.correlationfilter.utils import pad, crop, fast2dconv
+from templatetracker.correlationfilter.utils import pad, crop, fast2dconv
 
 
 def learn_mosse(X, y, l=0.01, boundary='constant'):

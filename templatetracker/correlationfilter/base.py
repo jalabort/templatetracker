@@ -3,9 +3,9 @@ from menpo.shape import PointCloud
 from menpo.transform import Affine
 from menpo.feature import no_op
 
-from tracker.correlationfilter.correlationfilter import (
+from templatetracker.correlationfilter.correlationfilter import (
     learn_mosse, increment_mosse)
-from tracker.correlationfilter.kernelizedfilter import (
+from templatetracker.correlationfilter.kernelizedfilter import (
     learn_kcf, gaussian_correlation)
 from .utils import (
     build_grid, generate_gaussian_response, normalizenorm_vec, fast2dconv,

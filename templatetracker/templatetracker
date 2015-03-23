@@ -5,7 +5,7 @@ import numpy as np
 
 from menpo.shape import PointCloud
 
-from tracker.base import Tracker
+from templatetracker.base import Tracker
 
 
 def main(video_file, centre, shape):
