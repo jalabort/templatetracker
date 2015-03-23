@@ -8,7 +8,7 @@ include_dirs = [np.get_include()]
 requirements = ['menpo>=0.4.4',
                 'opencv>=2.4.8']
 
-setup(name='tracker',
+setup(name='templatetracker',
       version='0.0.1',
       description='Correlation Filter Based Tracker',
       author='Joan Alabort-i-Medina',
@@ -16,4 +16,4 @@ setup(name='tracker',
       include_dirs=include_dirs,
       packages=find_packages(),
       install_requires=requirements,
-      scripts=[p.join('tracker', 'tracker')])
+      scripts=[p.join('templatetracker', 'templatetracker')])
